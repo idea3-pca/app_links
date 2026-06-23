@@ -18,7 +18,7 @@ public final class AppLinksIosPlugin: NSObject, FlutterPlugin, FlutterStreamHand
     #if DEBUG
     // https://github.com/llfbandit/app_links/issues/211
     // https://github.com/flutter/flutter/issues/149214
-    // Cancel registration because registrar is null while in swift it is referenced as non-nullable parameter.
+    // Cancel registration because registrar is null while in swift it is referenced as non-nullable parameter
     let messenger = (registrar as? NSObject)?.value(forKey: "messenger")
     if messenger == nil {
       print("Flutter application in debug mode can only be launched from Flutter tooling, use profile or release modes instead.")
